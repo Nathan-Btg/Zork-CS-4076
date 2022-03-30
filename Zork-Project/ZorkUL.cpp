@@ -3,11 +3,11 @@
 using namespace std;
 #include "ZorkUL.h"
 
-int main(int argc, char argv[]) {
+/*int main(int argc, char argv[]) {
 	ZorkUL temp;
 	temp.play();
 	return 0;
-}
+}*/
 
 ZorkUL::ZorkUL() {
 	createRooms();

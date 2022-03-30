@@ -1,6 +1,27 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QCoreApplication>
+#include <QApplication>
+#include <QLabel>
+#include <QComboBox>
+#include <QVBoxLayout>
+#include <QStackedWidget>
+#include <QRadioButton>
+#include <QGroupBox>
+#include <QVBoxLayout>
+#include <QComboBox>
+#include <QString>
+#include <QToolBar>
+#include <QSignalMapper>
+//#include "playwindow.h"
+//#include "charinfowindow.h"
+#include "ZorkUL.h"
+#include <iostream>
+#include <QTextStream>
+#include <QMovie>
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
