@@ -27,7 +27,8 @@ HEADERS += \
     Room.h \
     ZorkUL.h \
     item.h \
-    mainwindow.h
+    mainwindow.h \
+    testloadingwidget.h
 
 FORMS += \
     mainwindow.ui
@@ -39,4 +40,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     MAKEFILE.txt \
+    images/vault.jpg \
+    vault.jpg \
     vault.jpg

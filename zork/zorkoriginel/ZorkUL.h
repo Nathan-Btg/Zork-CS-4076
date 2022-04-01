@@ -10,19 +10,14 @@
 using namespace std;
 
 class ZorkUL {
-
-    friend class MainWindow;
 private:
 	Parser parser;
 	Room *currentRoom;
-    vector <Room*> Roomlist;
-    void goRoom(string direction);
-
-    //////////////////////////////////
-    void createRooms();
+	void createRooms();
 	void printWelcome();
 	bool processCommand(Command command);
 	void printHelp();
+	void goRoom(Command command);
     void createItems();
     void displayItems();
 

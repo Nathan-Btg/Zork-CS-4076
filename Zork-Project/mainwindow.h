@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
 #include<QPushButton>
+#include "ZorkUL.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,14 +16,21 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void setgame();
+    //string getCommand();
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_Up_clicked();
+
+    void on_Left_clicked();
+
+    void on_Right_clicked();
+
+    void on_Down_clicked();
 
 private:
     Ui::MainWindow *ui;
-
-    // requires an #include<QPushButton> at the top of the file
-    QPushButton *push_button2;
+    ZorkUL *game;
 };
 #endif // MAINWINDOW_H

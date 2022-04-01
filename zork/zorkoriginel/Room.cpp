@@ -2,20 +2,19 @@
 #include "Command.h"
 
 
-
 Room::Room(string description) {
 	this->description = description;
 }
 
-void Room::setExits(Room *up, Room *right, Room *down, Room *left) {
-    if (up != NULL)
-        exits["up"] = up;
-    if (right != NULL)
-        exits["right"] = right;
-    if (down != NULL)
-        exits["down"] = down;
-    if (left != NULL)
-        exits["west"] = left;
+void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
+	if (north != NULL)
+		exits["north"] = north;
+	if (east != NULL)
+		exits["east"] = east;
+	if (south != NULL)
+		exits["south"] = south;
+	if (west != NULL)
+		exits["west"] = west;
 }
 
 string Room::shortDescription() {
