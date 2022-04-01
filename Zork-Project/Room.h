@@ -18,11 +18,13 @@ private:
 
 
 public:
+    string getName();
+
     int numberOfItems();
 	Room(string description);
 	void setExits(Room *north, Room *east, Room *south, Room *west);
-	string shortDescription();
-	string longDescription();
+
+    string longDescription();
 	Room* nextRoom(string direction);
     void addItem(Item *inItem);
     string displayItem();

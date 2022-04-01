@@ -31,6 +31,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    ZorkUL *game;
+    ZorkUL *playgame;
 };
 #endif // MAINWINDOW_H

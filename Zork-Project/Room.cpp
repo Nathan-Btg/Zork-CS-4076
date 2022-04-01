@@ -15,10 +15,10 @@ void Room::setExits(Room *up, Room *right, Room *down, Room *left) {
     if (down != NULL)
         exits["down"] = down;
     if (left != NULL)
-        exits["west"] = left;
+        exits["left"] = left;
 }
 
-string Room::shortDescription() {
+string Room::getName() {
 	return description;
 }
 
@@ -37,7 +37,7 @@ string Room::exitString() {
 Room* Room::nextRoom(string direction) {
 	map<string, Room*>::iterator next = exits.find(direction); //returns an iterator for the "pair"
 	if (next == exits.end())
-		return NULL; // if exits.end() was returned, there's no room in that direction.
+        return NULL;   // if exits.end() was returned, there's no room in that direction.
 	return next->second; // If there is a room, remove the "second" (Room*)
 				// part of the "pair" (<string, Room*>) and return it.
 }
@@ -88,4 +88,6 @@ int Room::isItemInRoom(string inString)
         }
     return -1;
 }
+
+
 

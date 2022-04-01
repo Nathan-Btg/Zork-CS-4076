@@ -16,6 +16,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,14 +31,16 @@ public:
     QPushButton *Up;
     QWidget *gridLayoutWidget;
     QGridLayout *inventaire;
-    QLabel *label_2;
-    QLabel *label;
-    QLabel *label_4;
-    QLabel *label_3;
-    QLabel *label_5;
-    QLabel *label_6;
+    QLabel *item5;
+    QLabel *item3;
+    QLabel *item1;
+    QLabel *item4;
+    QLabel *item6;
+    QLabel *item2;
+    QLabel *inventairename;
     QLabel *photo;
     QFrame *line;
+    QTextEdit *RoomNameText;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -48,61 +51,78 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Down = new QPushButton(centralwidget);
         Down->setObjectName(QString::fromUtf8("Down"));
-        Down->setGeometry(QRect(560, 510, 120, 50));
+        Down->setGeometry(QRect(620, 550, 100, 40));
         Left = new QPushButton(centralwidget);
         Left->setObjectName(QString::fromUtf8("Left"));
-        Left->setGeometry(QRect(500, 460, 120, 50));
+        Left->setGeometry(QRect(570, 510, 100, 40));
         Right = new QPushButton(centralwidget);
         Right->setObjectName(QString::fromUtf8("Right"));
-        Right->setGeometry(QRect(620, 460, 120, 50));
+        Right->setGeometry(QRect(670, 510, 100, 40));
         Up = new QPushButton(centralwidget);
         Up->setObjectName(QString::fromUtf8("Up"));
-        Up->setGeometry(QRect(560, 410, 120, 50));
+        Up->setGeometry(QRect(620, 470, 100, 40));
         gridLayoutWidget = new QWidget(centralwidget);
         gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(449, 9, 341, 381));
+        gridLayoutWidget->setGeometry(QRect(550, 0, 241, 431));
         inventaire = new QGridLayout(gridLayoutWidget);
         inventaire->setObjectName(QString::fromUtf8("inventaire"));
         inventaire->setContentsMargins(0, 0, 0, 0);
-        label_2 = new QLabel(gridLayoutWidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        item5 = new QLabel(gridLayoutWidget);
+        item5->setObjectName(QString::fromUtf8("item5"));
 
-        inventaire->addWidget(label_2, 1, 0, 1, 1);
+        inventaire->addWidget(item5, 3, 0, 1, 1);
 
-        label = new QLabel(gridLayoutWidget);
-        label->setObjectName(QString::fromUtf8("label"));
+        item3 = new QLabel(gridLayoutWidget);
+        item3->setObjectName(QString::fromUtf8("item3"));
 
-        inventaire->addWidget(label, 0, 0, 1, 1);
+        inventaire->addWidget(item3, 2, 0, 1, 1);
 
-        label_4 = new QLabel(gridLayoutWidget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
+        item1 = new QLabel(gridLayoutWidget);
+        item1->setObjectName(QString::fromUtf8("item1"));
+        item1->setEnabled(true);
 
-        inventaire->addWidget(label_4, 1, 1, 1, 1);
+        inventaire->addWidget(item1, 1, 0, 1, 1);
 
-        label_3 = new QLabel(gridLayoutWidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        item4 = new QLabel(gridLayoutWidget);
+        item4->setObjectName(QString::fromUtf8("item4"));
 
-        inventaire->addWidget(label_3, 0, 1, 1, 1);
+        inventaire->addWidget(item4, 2, 1, 1, 1);
 
-        label_5 = new QLabel(gridLayoutWidget);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
+        item6 = new QLabel(gridLayoutWidget);
+        item6->setObjectName(QString::fromUtf8("item6"));
 
-        inventaire->addWidget(label_5, 2, 0, 1, 1);
+        inventaire->addWidget(item6, 3, 1, 1, 1);
 
-        label_6 = new QLabel(gridLayoutWidget);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
+        item2 = new QLabel(gridLayoutWidget);
+        item2->setObjectName(QString::fromUtf8("item2"));
 
-        inventaire->addWidget(label_6, 2, 1, 1, 1);
+        inventaire->addWidget(item2, 1, 1, 1, 1);
+
+        inventairename = new QLabel(gridLayoutWidget);
+        inventairename->setObjectName(QString::fromUtf8("inventairename"));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Calibri Light")});
+        font.setPointSize(28);
+        font.setUnderline(false);
+        inventairename->setFont(font);
+
+        inventaire->addWidget(inventairename, 0, 0, 1, 2);
 
         photo = new QLabel(centralwidget);
         photo->setObjectName(QString::fromUtf8("photo"));
-        photo->setGeometry(QRect(20, 130, 400, 300));
+        photo->setGeometry(QRect(20, 130, 510, 320));
         line = new QFrame(centralwidget);
         line->setObjectName(QString::fromUtf8("line"));
-        line->setGeometry(QRect(390, 0, 101, 601));
+        line->setGeometry(QRect(490, 0, 101, 601));
         line->setLineWidth(5);
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
+        RoomNameText = new QTextEdit(centralwidget);
+        RoomNameText->setObjectName(QString::fromUtf8("RoomNameText"));
+        RoomNameText->setGeometry(QRect(100, 20, 361, 51));
+        QFont font1;
+        font1.setPointSize(20);
+        RoomNameText->setFont(font1);
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -117,12 +137,13 @@ public:
         Left->setText(QCoreApplication::translate("MainWindow", "Left", nullptr));
         Right->setText(QCoreApplication::translate("MainWindow", "Right", nullptr));
         Up->setText(QCoreApplication::translate("MainWindow", "Up", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_6->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        item5->setText(QString());
+        item3->setText(QString());
+        item1->setText(QString());
+        item4->setText(QString());
+        item6->setText(QString());
+        item2->setText(QString());
+        inventairename->setText(QCoreApplication::translate("MainWindow", "             Inventory", nullptr));
         photo->setText(QString());
     } // retranslateUi
 
