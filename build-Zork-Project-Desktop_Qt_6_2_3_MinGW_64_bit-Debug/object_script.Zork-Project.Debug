@@ -5,6 +5,7 @@ debug/Parser.o
 debug/Room.o
 debug/ZorkUL.o
 debug/item.o
+debug/item2.o
 debug/main.o
 debug/mainwindow.o
 debug/moc_mainwindow.o

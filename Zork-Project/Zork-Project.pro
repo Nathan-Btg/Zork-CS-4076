@@ -16,6 +16,7 @@ SOURCES += \
     Room.cpp \
     ZorkUL.cpp \
     item.cpp \
+    item2.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -27,6 +28,7 @@ HEADERS += \
     Room.h \
     ZorkUL.h \
     item.h \
+    item2.h \
     mainwindow.h \
     testloadingwidget.h
 

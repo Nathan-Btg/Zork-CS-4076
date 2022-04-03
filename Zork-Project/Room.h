@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include "item.h"
+//#include "mainwindow.h"
 using namespace std;
 using std::vector;
 
@@ -14,11 +15,14 @@ private:
 	string description;
 	map<string, Room*> exits;
 	string exitString();
-    vector <Item> itemsInRoom;
+
 
 
 public:
+    vector <Item> itemsInRoom;
+
     string getName();
+    int getIndex(string description);
 
     int numberOfItems();
 	Room(string description);

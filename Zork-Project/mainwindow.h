@@ -17,7 +17,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void setgame();
-    //string getCommand();
+    void displayitem(string itemname);
+    void hideitem(string itemname);
 
 private slots:
 
@@ -28,6 +29,10 @@ private slots:
     void on_Right_clicked();
 
     void on_Down_clicked();
+
+    void on_Takebutton_clicked();
+
+    void on_Dropbutton_clicked();
 
 private:
     Ui::MainWindow *ui;

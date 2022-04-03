@@ -3,7 +3,7 @@
 
 using namespace std;
 #include "ZorkUL.h"
-#include "game.h"
+
 
 ZorkUL::ZorkUL() {
 	createRooms();
@@ -13,15 +13,14 @@ void ZorkUL::createRooms()  {
     Room *hall, *secroom, *vault, *toilets, *dirroom, *counter, *gates, *upstairs, *waitroom;
 
     hall = new Room("hall");
-        hall->addItem(new Item("x", 1, 11));
-        hall->addItem(new Item("y", 2, 22));
     secroom = new Room("security room");
-        secroom->addItem(new Item("xx", 3, 33));
-        secroom->addItem(new Item("yy", 4, 44));
+        secroom->addItem(new Item("taser"));
     vault = new Room("vault");
     toilets = new Room("toilets");
+        toilets->addItem(new Item("pin"));
     dirroom = new Room("director office");
     counter = new Room("bank counter");
+        counter->addItem(new Item("employee card"));
     gates = new Room("security gates");
     upstairs = new Room("upstairs");
     waitroom = new Room("waiting room");
@@ -48,6 +47,11 @@ void ZorkUL::createRooms()  {
     Roomlist.push_back(gates);
     Roomlist.push_back(upstairs);
     Roomlist.push_back(waitroom);
+
+}
+
+void ZorkUL::addtoinventory(Item item){
+    Inventory.push_back(item);
 }
 
 void ZorkUL::goRoom(string direction) {

@@ -41,6 +41,9 @@ public:
     QLabel *photo;
     QFrame *line;
     QTextEdit *RoomNameText;
+    QTextEdit *story;
+    QPushButton *Takebutton;
+    QPushButton *Dropbutton;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -101,7 +104,6 @@ public:
         inventairename = new QLabel(gridLayoutWidget);
         inventairename->setObjectName(QString::fromUtf8("inventairename"));
         QFont font;
-        font.setFamilies({QString::fromUtf8("Calibri Light")});
         font.setPointSize(28);
         font.setUnderline(false);
         inventairename->setFont(font);
@@ -123,6 +125,15 @@ public:
         QFont font1;
         font1.setPointSize(20);
         RoomNameText->setFont(font1);
+        story = new QTextEdit(centralwidget);
+        story->setObjectName(QString::fromUtf8("story"));
+        story->setGeometry(QRect(10, 480, 521, 111));
+        Takebutton = new QPushButton(centralwidget);
+        Takebutton->setObjectName(QString::fromUtf8("Takebutton"));
+        Takebutton->setGeometry(QRect(550, 440, 61, 61));
+        Dropbutton = new QPushButton(centralwidget);
+        Dropbutton->setObjectName(QString::fromUtf8("Dropbutton"));
+        Dropbutton->setGeometry(QRect(730, 440, 61, 61));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -143,8 +154,10 @@ public:
         item4->setText(QString());
         item6->setText(QString());
         item2->setText(QString());
-        inventairename->setText(QCoreApplication::translate("MainWindow", "             Inventory", nullptr));
+        inventairename->setText(QCoreApplication::translate("MainWindow", "      Inventory", nullptr));
         photo->setText(QString());
+        Takebutton->setText(QCoreApplication::translate("MainWindow", "Take item", nullptr));
+        Dropbutton->setText(QCoreApplication::translate("MainWindow", "Drop item", nullptr));
     } // retranslateUi
 
 };

@@ -5,6 +5,7 @@ release/Parser.o
 release/Room.o
 release/ZorkUL.o
 release/item.o
+release/item2.o
 release/main.o
 release/mainwindow.o
 release/moc_mainwindow.o

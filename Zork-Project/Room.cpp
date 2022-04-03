@@ -1,5 +1,6 @@
 #include "Room.h"
 #include "Command.h"
+#include "mainwindow.h"
 
 
 
@@ -43,8 +44,6 @@ Room* Room::nextRoom(string direction) {
 }
 
 void Room::addItem(Item *inItem) {
-    //cout <<endl;
-    //cout << "Just added" + inItem->getLongDescription();
     itemsInRoom.push_back(*inItem);
 }
 
@@ -89,5 +88,14 @@ int Room::isItemInRoom(string inString)
     return -1;
 }
 
+int Room::getIndex(string description){
+    int i=0;
+    for (int n=0;n<numberOfItems();n++)
+    {
+        if (itemsInRoom[0].getShortDescription()==description)
+            i=n;
+    }
+    return i;
+}
 
 

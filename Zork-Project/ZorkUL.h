@@ -11,11 +11,14 @@ using namespace std;
 
 class ZorkUL {
 
-    friend class MainWindow;
+    friend class MainWindow; //frienship
 private:
+
 	Parser parser;
 	Room *currentRoom;
     vector <Room*> Roomlist;
+    vector <Item> Inventory;
+
     void goRoom(string direction);
 
     //////////////////////////////////
@@ -27,6 +30,7 @@ private:
     void displayItems();
 
 public:
+    void addtoinventory(Item item);
 	ZorkUL();
 	void play();
 	string go(string direction);

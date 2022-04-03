@@ -128,13 +128,12 @@
       <widget class="QLabel" name="inventairename">
        <property name="font">
         <font>
-         <family>Calibri Light</family>
          <pointsize>28</pointsize>
          <underline>false</underline>
         </font>
        </property>
        <property name="text">
-        <string>             Inventory</string>
+        <string>      Inventory</string>
        </property>
       </widget>
      </item>
@@ -182,6 +181,42 @@
      <font>
       <pointsize>20</pointsize>
      </font>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="story">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>521</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Takebutton">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Take item</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Dropbutton">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>440</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Drop item</string>
     </property>
    </widget>
   </widget>
