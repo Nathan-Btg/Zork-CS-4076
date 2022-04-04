@@ -16,9 +16,9 @@ SOURCES += \
     Room.cpp \
     ZorkUL.cpp \
     item.cpp \
-    item2.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    wordle2.cpp
 
 HEADERS += \
     Character.h \
@@ -28,12 +28,13 @@ HEADERS += \
     Room.h \
     ZorkUL.h \
     item.h \
-    item2.h \
     mainwindow.h \
-    testloadingwidget.h
+    testloadingwidget.h \
+    wordle2.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    wordle2.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

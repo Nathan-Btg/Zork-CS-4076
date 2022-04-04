@@ -44,6 +44,7 @@ public:
     QTextEdit *story;
     QPushButton *Takebutton;
     QPushButton *Dropbutton;
+    QPushButton *strongbox;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -134,6 +135,9 @@ public:
         Dropbutton = new QPushButton(centralwidget);
         Dropbutton->setObjectName(QString::fromUtf8("Dropbutton"));
         Dropbutton->setGeometry(QRect(730, 440, 61, 61));
+        strongbox = new QPushButton(centralwidget);
+        strongbox->setObjectName(QString::fromUtf8("strongbox"));
+        strongbox->setGeometry(QRect(560, 340, 101, 71));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -158,6 +162,7 @@ public:
         photo->setText(QString());
         Takebutton->setText(QCoreApplication::translate("MainWindow", "Take item", nullptr));
         Dropbutton->setText(QCoreApplication::translate("MainWindow", "Drop item", nullptr));
+        strongbox->setText(QCoreApplication::translate("MainWindow", "Open strongbox", nullptr));
     } // retranslateUi
 
 };

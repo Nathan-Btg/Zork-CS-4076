@@ -6,6 +6,7 @@
 #include <QtDebug>
 #include <QString>
 #include <QPixmap>
+#include "wordle2.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -23,6 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->Takebutton->hide();
     ui->Dropbutton->hide();
+
+
 }
 
 MainWindow::~MainWindow()
@@ -78,6 +81,9 @@ void MainWindow::on_Down_clicked()
         ui->Takebutton->show();
     else
         ui->Takebutton->hide();
+    if (playgame->step==0){
+
+    }
 }
 
 void MainWindow::setgame()
@@ -106,7 +112,7 @@ void MainWindow::on_Takebutton_clicked()
         ui->item3->setPixmap(QPixmap("C:/Users/Natha/Desktop/Zork-CS-4076/Zork-Project/images/employee card.png").scaled(117,103));
     }
     Item takenitem=playgame->currentRoom->itemsInRoom[0];
-    //playgame->currentRoom->removeItemFromRoom(0);
+    playgame->currentRoom->removeItemFromRoom(0);
     playgame->addtoinventory(takenitem);
 }
 
@@ -121,5 +127,122 @@ void MainWindow::on_Dropbutton_clicked()
     }
     Item droppeditem=playgame->Inventory[0];
     playgame->currentRoom->addItem(new Item(droppeditem.getShortDescription()));
+}
+
+void MainWindow::Story()
+{
+
+    if (playgame->currentRoom->getName()=="hall")
+        ui->story->setText("");
+    else if (playgame->currentRoom->getName()=="hall")
+        ui->story->setText("");
+    else{
+        if (playgame->step==0)
+        {
+            if (playgame->currentRoom->getName()=="toilets")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="bank counter")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="waiting room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security gates")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="upstairs")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="director office")
+                ui->story->setText("");
+        }
+        else if (playgame->step==1){
+            if (playgame->currentRoom->getName()=="toilets")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="bank counter")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="waiting room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security gates")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="upstairs")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="director office")
+                ui->story->setText("");
+        }
+        else if (playgame->step==2){
+            if (playgame->currentRoom->getName()=="toilets")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="bank counter")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="waiting room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security gates")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="upstairs")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="director office")
+                ui->story->setText("");
+        }
+        else if (playgame->step==3){
+            if (playgame->currentRoom->getName()=="toilets")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="bank counter")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="waiting room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security gates")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="upstairs")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="director office")
+                ui->story->setText("");
+        }
+        else if (playgame->step==4){
+            if (playgame->currentRoom->getName()=="toilets")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="bank counter")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="waiting room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security gates")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="upstairs")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="director office")
+                ui->story->setText("");
+        }
+        else if (playgame->step==5){
+            if (playgame->currentRoom->getName()=="toilets")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="bank counter")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="waiting room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security gates")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="upstairs")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="security room")
+                ui->story->setText("");
+            else if (playgame->currentRoom->getName()=="director office")
+                ui->story->setText("");
+        }
+    }
+}
+
+void MainWindow::on_strongbox_clicked()
+{
+    Wordle2 *w =new Wordle2;
+    w->show();
+    w->line=0;
+    w->col=0;
+    //this->hide();
 }
 

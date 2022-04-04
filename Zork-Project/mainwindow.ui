@@ -219,6 +219,19 @@
      <string>Drop item</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="strongbox">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>340</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open strongbox</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

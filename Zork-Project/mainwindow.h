@@ -34,8 +34,12 @@ private slots:
 
     void on_Dropbutton_clicked();
 
+    void on_strongbox_clicked();
+
 private:
     Ui::MainWindow *ui;
     ZorkUL *playgame;
+    void Story();
+
 };
 #endif // MAINWINDOW_H

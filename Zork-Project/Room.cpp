@@ -98,4 +98,8 @@ int Room::getIndex(string description){
     return i;
 }
 
+void Room::removeItemFromRoom(int index){
+    itemsInRoom.erase(itemsInRoom.begin()+index);
+}
+
 

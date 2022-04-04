@@ -19,6 +19,7 @@ private:
     vector <Room*> Roomlist;
     vector <Item> Inventory;
 
+
     void goRoom(string direction);
 
     //////////////////////////////////
@@ -34,6 +35,7 @@ public:
 	ZorkUL();
 	void play();
 	string go(string direction);
+    int step;
 };
 
 #endif /*ZORKUL_H_*/
