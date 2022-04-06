@@ -102,4 +102,7 @@ void Room::removeItemFromRoom(int index){
     itemsInRoom.erase(itemsInRoom.begin()+index);
 }
 
+void SecretRoom::GoSecret(){
+
+}
 

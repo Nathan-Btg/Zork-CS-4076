@@ -10,7 +10,7 @@ using std::vector;
 
 class Room {
 
-private:
+protected:
 	string description;
 	map<string, Room*> exits;
 	string exitString();
@@ -33,6 +33,12 @@ public:
     string displayItem();
     int isItemInRoom(string inString);
     void removeItemFromRoom(int location);
+};
+
+class SecretRoom: public Room{
+private:
+    void GoSecret();
+
 };
 
 #endif
