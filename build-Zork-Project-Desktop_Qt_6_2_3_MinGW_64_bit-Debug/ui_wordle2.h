@@ -14,6 +14,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,7 +24,7 @@ class Ui_Wordle2
 public:
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
-    QPushButton *Ib_2;
+    QPushButton *Jb;
     QPushButton *Qb;
     QPushButton *Lb;
     QPushButton *Db;
@@ -50,6 +51,34 @@ public:
     QPushButton *Bb;
     QPushButton *Nb;
     QPushButton *Enter;
+    QPushButton *test;
+    QWidget *gridLayoutWidget_2;
+    QGridLayout *gridLayout_2;
+    QTextEdit *textEdit_19;
+    QTextEdit *textEdit_6;
+    QTextEdit *textEdit_20;
+    QTextEdit *textEdit_2;
+    QTextEdit *textEdit_7;
+    QTextEdit *textEdit;
+    QTextEdit *textEdit_22;
+    QTextEdit *textEdit_13;
+    QTextEdit *textEdit_8;
+    QTextEdit *textEdit_3;
+    QTextEdit *textEdit_4;
+    QTextEdit *textEdit_5;
+    QTextEdit *textEdit_9;
+    QTextEdit *textEdit_10;
+    QTextEdit *textEdit_11;
+    QTextEdit *textEdit_12;
+    QTextEdit *textEdit_16;
+    QTextEdit *textEdit_14;
+    QTextEdit *textEdit_18;
+    QTextEdit *textEdit_17;
+    QTextEdit *textEdit_15;
+    QTextEdit *textEdit_21;
+    QTextEdit *textEdit_23;
+    QTextEdit *textEdit_24;
+    QTextEdit *textEdit_25;
 
     void setupUi(QDialog *Wordle2)
     {
@@ -58,14 +87,14 @@ public:
         Wordle2->resize(800, 900);
         gridLayoutWidget = new QWidget(Wordle2);
         gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(30, 390, 741, 161));
+        gridLayoutWidget->setGeometry(QRect(30, 390, 856, 161));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        Ib_2 = new QPushButton(gridLayoutWidget);
-        Ib_2->setObjectName(QString::fromUtf8("Ib_2"));
+        Jb = new QPushButton(gridLayoutWidget);
+        Jb->setObjectName(QString::fromUtf8("Jb"));
 
-        gridLayout->addWidget(Ib_2, 1, 6, 1, 1);
+        gridLayout->addWidget(Jb, 1, 6, 1, 1);
 
         Qb = new QPushButton(gridLayoutWidget);
         Qb->setObjectName(QString::fromUtf8("Qb"));
@@ -197,6 +226,170 @@ public:
 
         gridLayout->addWidget(Enter, 2, 8, 1, 1);
 
+        test = new QPushButton(gridLayoutWidget);
+        test->setObjectName(QString::fromUtf8("test"));
+
+        gridLayout->addWidget(test, 2, 7, 1, 1);
+
+        gridLayoutWidget_2 = new QWidget(Wordle2);
+        gridLayoutWidget_2->setObjectName(QString::fromUtf8("gridLayoutWidget_2"));
+        gridLayoutWidget_2->setGeometry(QRect(160, 0, 501, 381));
+        QFont font;
+        font.setPointSize(36);
+        gridLayoutWidget_2->setFont(font);
+        gridLayout_2 = new QGridLayout(gridLayoutWidget_2);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
+        textEdit_19 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_19->setObjectName(QString::fromUtf8("textEdit_19"));
+        textEdit_19->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_19, 3, 3, 1, 1);
+
+        textEdit_6 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_6->setObjectName(QString::fromUtf8("textEdit_6"));
+        textEdit_6->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_6, 1, 0, 1, 1);
+
+        textEdit_20 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_20->setObjectName(QString::fromUtf8("textEdit_20"));
+        textEdit_20->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_20, 3, 4, 1, 1);
+
+        textEdit_2 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_2->setObjectName(QString::fromUtf8("textEdit_2"));
+        textEdit_2->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_2, 0, 1, 1, 1);
+
+        textEdit_7 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_7->setObjectName(QString::fromUtf8("textEdit_7"));
+        textEdit_7->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_7, 1, 1, 1, 1);
+
+        textEdit = new QTextEdit(gridLayoutWidget_2);
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        textEdit->setFont(font);
+
+        gridLayout_2->addWidget(textEdit, 0, 0, 1, 1);
+
+        textEdit_22 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_22->setObjectName(QString::fromUtf8("textEdit_22"));
+        textEdit_22->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_22, 4, 1, 1, 1);
+
+        textEdit_13 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_13->setObjectName(QString::fromUtf8("textEdit_13"));
+        textEdit_13->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_13, 2, 2, 1, 1);
+
+        textEdit_8 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_8->setObjectName(QString::fromUtf8("textEdit_8"));
+        textEdit_8->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_8, 1, 2, 1, 1);
+
+        textEdit_3 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_3->setObjectName(QString::fromUtf8("textEdit_3"));
+        textEdit_3->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_3, 0, 2, 1, 1);
+
+        textEdit_4 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_4->setObjectName(QString::fromUtf8("textEdit_4"));
+        textEdit_4->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_4, 0, 3, 1, 1);
+
+        textEdit_5 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_5->setObjectName(QString::fromUtf8("textEdit_5"));
+        textEdit_5->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_5, 0, 4, 1, 1);
+
+        textEdit_9 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_9->setObjectName(QString::fromUtf8("textEdit_9"));
+        textEdit_9->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_9, 1, 3, 1, 1);
+
+        textEdit_10 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_10->setObjectName(QString::fromUtf8("textEdit_10"));
+        textEdit_10->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_10, 1, 4, 1, 1);
+
+        textEdit_11 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_11->setObjectName(QString::fromUtf8("textEdit_11"));
+        textEdit_11->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_11, 2, 0, 1, 1);
+
+        textEdit_12 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_12->setObjectName(QString::fromUtf8("textEdit_12"));
+        textEdit_12->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_12, 2, 1, 1, 1);
+
+        textEdit_16 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_16->setObjectName(QString::fromUtf8("textEdit_16"));
+        textEdit_16->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_16, 3, 0, 1, 1);
+
+        textEdit_14 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_14->setObjectName(QString::fromUtf8("textEdit_14"));
+        textEdit_14->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_14, 2, 3, 1, 1);
+
+        textEdit_18 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_18->setObjectName(QString::fromUtf8("textEdit_18"));
+        textEdit_18->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_18, 3, 2, 1, 1);
+
+        textEdit_17 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_17->setObjectName(QString::fromUtf8("textEdit_17"));
+        textEdit_17->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_17, 3, 1, 1, 1);
+
+        textEdit_15 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_15->setObjectName(QString::fromUtf8("textEdit_15"));
+        textEdit_15->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_15, 2, 4, 1, 1);
+
+        textEdit_21 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_21->setObjectName(QString::fromUtf8("textEdit_21"));
+        textEdit_21->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_21, 4, 0, 1, 1);
+
+        textEdit_23 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_23->setObjectName(QString::fromUtf8("textEdit_23"));
+        textEdit_23->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_23, 4, 2, 1, 1);
+
+        textEdit_24 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_24->setObjectName(QString::fromUtf8("textEdit_24"));
+        textEdit_24->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_24, 4, 3, 1, 1);
+
+        textEdit_25 = new QTextEdit(gridLayoutWidget_2);
+        textEdit_25->setObjectName(QString::fromUtf8("textEdit_25"));
+        textEdit_25->setFont(font);
+
+        gridLayout_2->addWidget(textEdit_25, 4, 4, 1, 1);
+
 
         retranslateUi(Wordle2);
 
@@ -206,7 +399,7 @@ public:
     void retranslateUi(QDialog *Wordle2)
     {
         Wordle2->setWindowTitle(QCoreApplication::translate("Wordle2", "Dialog", nullptr));
-        Ib_2->setText(QCoreApplication::translate("Wordle2", "J", nullptr));
+        Jb->setText(QCoreApplication::translate("Wordle2", "J", nullptr));
         Qb->setText(QCoreApplication::translate("Wordle2", "Q", nullptr));
         Lb->setText(QCoreApplication::translate("Wordle2", "L", nullptr));
         Db->setText(QCoreApplication::translate("Wordle2", "D", nullptr));
@@ -233,6 +426,7 @@ public:
         Bb->setText(QCoreApplication::translate("Wordle2", "B", nullptr));
         Nb->setText(QCoreApplication::translate("Wordle2", "N", nullptr));
         Enter->setText(QCoreApplication::translate("Wordle2", "Enter", nullptr));
+        test->setText(QCoreApplication::translate("Wordle2", "test", nullptr));
     } // retranslateUi
 
 };

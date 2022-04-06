@@ -2,6 +2,8 @@
 #define WORDLE2_H
 
 #include <QDialog>
+#include <string>
+using namespace std;
 
 namespace Ui {
 class Wordle2;
@@ -15,7 +17,11 @@ public:
     explicit Wordle2(QWidget *parent = nullptr);
     ~Wordle2();
     int line;
-    int col;
+    string answer;
+protected:
+    string actualtry;
+
+
 
 private slots:
     void on_Ab_clicked();
@@ -52,8 +58,6 @@ private slots:
 
     void on_Hb_clicked();
 
-    void on_Ib_2_clicked();
-
     void on_Lb_clicked();
 
     void on_Mb_clicked();
@@ -72,8 +76,15 @@ private slots:
 
     void on_Enter_clicked();
 
+    void on_Jb_clicked();
+
+    void on_test_clicked();
+
 private:
     Ui::Wordle2 *ui;
+    void writeletter(string lettre, int pos);
+    void verif(string word);
+    int pos=0;
 
 };
 

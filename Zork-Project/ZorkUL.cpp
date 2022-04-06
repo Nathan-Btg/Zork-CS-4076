@@ -19,6 +19,7 @@ void ZorkUL::createRooms()  {
     toilets = new Room("toilets");
         toilets->addItem(new Item("pin"));
     dirroom = new Room("director office");
+        dirroom->addItem(new Item("key"));
     counter = new Room("bank counter");
         counter->addItem(new Item("employee card"));
     gates = new Room("security gates");
@@ -47,6 +48,8 @@ void ZorkUL::createRooms()  {
     Roomlist.push_back(gates);
     Roomlist.push_back(upstairs);
     Roomlist.push_back(waitroom);
+
+    this->step=0;
 
 }
 
@@ -85,5 +88,6 @@ void ZorkUL::goRoom(string direction) {
             if (currentRoom->getName()=="toilets")
                 step++;}
     }
+
 }
 

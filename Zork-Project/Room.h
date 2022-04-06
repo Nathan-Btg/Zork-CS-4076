@@ -5,7 +5,6 @@
 #include <string>
 #include <vector>
 #include "item.h"
-//#include "mainwindow.h"
 using namespace std;
 using std::vector;
 
