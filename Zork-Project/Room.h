@@ -38,7 +38,6 @@ public:
 class SecretRoom: public Room{
 private:
     void GoSecret();
-
 };
 
 #endif

@@ -16,7 +16,6 @@ class Wordle2 : public QDialog
 public:
     explicit Wordle2(QWidget *parent = nullptr);
     ~Wordle2();
-    int line;
     string answer;
 protected:
     string actualtry;
@@ -85,6 +84,7 @@ private:
     void writeletter(string lettre, int pos);
     void verif(string word);
     int pos=0;
+    int line=0;
 
 };
 

@@ -1,6 +1,7 @@
 #include "Room.h"
 #include "Command.h"
 #include "mainwindow.h"
+#include <QMessageBox>
 
 
 

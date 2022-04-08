@@ -1,6 +1,6 @@
 #ifndef ZORKUL_H_
 #define ZORKUL_H_
-
+#include <QtDebug>
 #include "Command.h"
 #include "Parser.h"
 #include "Room.h"
@@ -35,7 +35,16 @@ public:
 	ZorkUL();
 	void play();
 	string go(string direction);
-    int step;
+    int step :4;
+};
+
+class MyException{
+public:
+    const char * what() const throw()
+    {
+        qDebug()<< "no exit here";
+        return "no exit";
+    }
 };
 
 #endif /*ZORKUL_H_*/

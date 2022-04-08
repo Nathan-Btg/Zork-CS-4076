@@ -91,3 +91,43 @@ void ZorkUL::goRoom(string direction) {
 
 }
 
+
+/*void ZorkUL::goRoom(string direction) {
+    // Try to leave current room.
+    try {
+        Room* nextRoom = currentRoom->nextRoom(direction);
+        if (nextRoom == NULL){
+            MyException *z=new MyException;
+            throw z;}
+        else {
+            currentRoom = nextRoom;
+            if (step==0){
+                if (currentRoom->getName()=="toilets")
+                    step++;
+            }
+            else if (step==1){
+                if (currentRoom->getName()=="bank counter")
+                    step++;}
+            else if (step==2){
+                if (currentRoom->getName()=="upstairs")
+                    step++;}
+            else if (step==3){
+                if (currentRoom->getName()=="security room")
+                    step++;}
+            else if (step==4){
+                if (currentRoom->getName()=="waiting room")
+                    step++;}
+            else if (step==5){
+                if (currentRoom->getName()=="director office")
+                    step++;}
+            else if (step==6){
+                if (currentRoom->getName()=="toilets")
+                    step++;}
+        }
+
+    }  catch (exception e) {
+        cout<<e.what();
+    }
+
+}*/
+

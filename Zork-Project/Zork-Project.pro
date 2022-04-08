@@ -45,4 +45,5 @@ DISTFILES += \
     MAKEFILE.txt \
     images/vault.jpg \
     vault.jpg \
-    vault.jpg
+    vault.jpg \
+    words.txt

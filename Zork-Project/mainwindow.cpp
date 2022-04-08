@@ -7,6 +7,9 @@
 #include <QString>
 #include <QPixmap>
 #include "wordle2.h"
+#include <fstream>
+
+using namespace std;
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -24,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->Takebutton->hide();
     ui->Dropbutton->hide();
+    ui->strongbox->hide();
 
     ui->story->setText("There is not so much to do here. Let's see elsewhere.");
 }
@@ -45,6 +49,10 @@ void MainWindow::on_Up_clicked()
         ui->Takebutton->show();
     else
         ui->Takebutton->hide();
+    if (playgame->currentRoom->getName()=="security room")
+        ui->strongbox->show();
+    else
+        ui->strongbox->hide();
     Story();
 }
 
@@ -84,6 +92,7 @@ void MainWindow::on_Down_clicked()
         ui->Takebutton->show();
     else
         ui->Takebutton->hide();
+     ui->strongbox->hide();
     Story();
 }
 
@@ -104,7 +113,7 @@ void MainWindow::displayitem(string itemname){
     else if  (itemname=="employee card")
         ui->item3->setPixmap(QPixmap("C:/Users/Natha/Desktop/Zork-CS-4076/Zork-Project/images/employee card.png").scaled(117,103));
     else if (itemname=="key")
-        ui->item4->setPixmap(QPixmap("C:/Users/Natha/Desktop/Zork-CS-4076/Zork-Project/images/key.png").scaled(117,103));
+        ui->item6->setPixmap(QPixmap("C:/Users/Natha/Desktop/Zork-CS-4076/Zork-Project/images/key.png").scaled(117,103));
 }
 
 void MainWindow::hideitem(string itemname){
@@ -262,8 +271,9 @@ void MainWindow::Story()
                 ui->story->setText("Cameras are disabled.");
             else if (playgame->currentRoom->getName()=="director office")
                 ui->story->setText("It's quiet here");
-            else if (playgame->currentRoom->getName()=="vault")
-                ui->story->setText("Congrats!! You finally entered the vault");
+            else if (playgame->currentRoom->getName()=="vault"){
+                ui->story->setTextColor(Qt::red);
+                ui->story->setText("Congrats!! You finally entered the vault");}
         }
 
 
@@ -273,8 +283,21 @@ void MainWindow::Story()
 void MainWindow::on_strongbox_clicked()
 {
     Wordle2 *w =new Wordle2;
+    //fstream file;
+    //file.open("words.txt", ios::in);
+    ifstream file("C:/Users/Natha/Desktop/Zork-CS-4076/Zork-Project/words.txt");
+    if (!file.is_open())
+        qDebug()<< "not open";
+    string mot;
+    string nomot;
+    int nmb = rand() % 30;
+    for (int i=0;i<=nmb;i++){
+        if (i==nmb)
+            getline(file,mot);
+        else
+            getline(file,nomot);
+    }
+    w->answer=mot;
     w->show();
-    w->line=0;
-    w->answer="ABCDE";
 }
 
